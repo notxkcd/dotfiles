@@ -1,0 +1,6 @@
+#!/bin/sh
+
+
+link=$1
+wget --no-directories --content-disposition -e robots=off -A.pdf -r \
+    "$link"

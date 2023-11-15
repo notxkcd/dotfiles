@@ -1,0 +1,6 @@
+#!/bin/sh
+# set -xe
+
+arg=$1
+OUT=$(fc-list | grep -i "$arg" | grep -i "regular" | cut -f 2 -d :)
+echo "$OUT"

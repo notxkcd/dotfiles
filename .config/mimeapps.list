@@ -1,0 +1,11 @@
+[Added Associations]
+video/mp4=filezilla.desktop;
+application/pdf=org.pwmt.zathura.desktop;
+
+[Default Applications]
+x-scheme-handler/eclipse+command=_usr_lib_dbeaver_.desktop
+application/pdf=org.pwmt.zathura.desktop
+x-scheme-handler/obsidian=obsidian.desktop
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+x-scheme-handler/fleet=jetbrains-fleet.desktop
+x-scheme-handler/mailto=chromium.desktop

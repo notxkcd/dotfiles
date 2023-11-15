@@ -1,0 +1,8 @@
+#!/bin/sh
+
+export XDG_CONFIG_HOME=/home/shahid/.config/nvim-simple/config
+# export XDG_DATA_HOME=/home/shahid/.config/nvim-simple/data
+
+# mkdir -p $XDG_DATA_HOME $XDG_CONFIG_HOME
+
+nvim -u /home/shahid/.config/nvim-simple/config/nvim/init.lua

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# custom path setter
+
+arg=$(xclip -o)
+
+export PATH="$PATH:$arg"
+echo $arg

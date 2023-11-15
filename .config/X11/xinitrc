@@ -1,0 +1,16 @@
+#!/bin/bash
+[ -f ~/.config/X11/xprofile ] && . ~/.config/X11/xprofile &
+[ -f ~/.config/X11/Xresources ] && . ~/.config/X11/Xresources &
+exec dwm
+
+# echo "1) i3
+# 2) dwm"
+
+# read val
+
+# case  $val in
+#   1 | 'i3')
+#     exec i3;;
+#   2 | 'dwm')
+#     exec dwm;;
+# esac

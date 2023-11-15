@@ -1,0 +1,71 @@
+#!/bin/zsh
+# set -xe
+
+file=$(readlink -f "$1")
+dir=${file%/*}
+base="${file%.*}"
+ext="${file##*.}"
+
+cd "$dir" || exit 1
+
+case "$ext" in
+	[0-9]) preconv "$file" | refer -PS -e | groff -mandoc -T pdf > "$base".pdf ;;
+	# c) cc  -std=c11  -g -O2 -Wall -Wextra -pedantic "$file" -o "$base" && "$base" ;
+	lhs|hs) ghc "$file" -o "$base" && "$base";;
+	rs) rustc "$file" -o "$base" && "$base" ;;
+	cpp)
+       if [  -e input.txt ] ; then
+          g++ -std=c++20 -g  -O2 -Wall -Wextra "$file" -o "$base" && "$base" <./input.txt 
+       else
+          g++ -std=c++20 -g  -O2 -Wall -Wextra "$file" -o "$base" && "$base" ;
+       fi
+          [ -e "$base" ] && rm "$base"
+       ;;
+	c)
+       if [  -e input.txt ] ; then
+          clang -std=c11 -g  -O2 -Wall -Wextra "$file" -o "$base" && "$base" <./input.txt 
+       else
+          clang -std=c11 -g  -O2 -Wall -Wextra "$file" -o "$base" && "$base" ;
+       fi
+          [ -e "$base" ] && rm "$base"
+        ;;
+ 	py)
+       if [  -e input.txt ] ; then
+          python "$file"  <./input.txt
+       else
+          python "$file"
+       fi
+       ;;      
+	cs) mcs "$file" -o "$base" && mono "$base";;
+	sh) bash "$file";;
+	s) cc -Wl,-z,noexecstack "$file" -o "$base" && "$base";;
+	asm) cc -Wl,-z,noexecstack "$file" -o "$base" && "$base";;
+  bf) bf "$file";;
+  js) bun "$file";;
+	rmd|md) Rscript -e "rmarkdown::render('$file')";;
+	# rmd) Rscript -e "rmarkdown::draft("tufte.Rmd", "tufte_html", "tufte")";;
+	d) dmd  -O -of="$base" "$file" && "$base" ;;
+	fs) fsharpc  --nologo    "$file" -o "$base"  && mono "$base";;
+	fsx) dotnet  fsi    "$file" ;;
+	ml) ocamlopt "$file" -o "$base" && "$base";;
+	go) go build  "$file" && "$base";;
+
+	h)
+		[ $base=="config" ] && (echo "aki1012" | sudo -S make install)  || exit;;
+
+	v) v "$file" -o "$base" && "$base" ;;
+	java) javac -d classes "$file" && java -cp classes "${1%.*}" ;;
+	nim) nim   --hints:off  c "$file" && "$base";;
+	sent) setsid -f sent "$file" 2>/dev/null ;;
+	tex | latex) pdflatex  --latex-engine=xelatex "$file"   -o "$base".pdf;;
+  zig) zig run "$file";;
+  odin) odin build "$file" -file  -out:"$base" && "$base";;
+  nasm) nasm  -f elf64 "$file" && ld -s -o "$base" "$base.o" && "$base";;
+  yasm) yasm  -f elf64 "$file" && ld -s -o "$base" "$base.o" && "$base";;
+  janet) janet "$file";;
+  scm) csc "$file" && "$base";;
+	vala) vala "$file";;
+  adb) gcc -c "$file" && gnatbind -x "$base.ali" && gnatlink "$base.ali" && "$base";;
+  "c3") c3c compile -O2  "$file" -o "$base" && "$base";;
+	*) sed -n '/^#!/s/^#!//p; q' "$file" | xargs -r -I % "$file" ;;
+esac

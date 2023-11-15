@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# set -xe
+# command=$(echo " " | dmenu -i -fn 'mono-15' -p "Execute... : ")
+# if [[ -n $command ]]; then 
+#   $command
+# fi
+
+wmctrl -r "Firefox" -e "0,200,200,800,600"

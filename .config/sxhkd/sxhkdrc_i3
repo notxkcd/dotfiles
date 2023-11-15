@@ -1,0 +1,214 @@
+
+super + s
+	screen_cast
+super + d
+	dmenu_run -p "Apps"
+super + shift + m
+	dmenumount
+super + shift + u
+	dmenuumount
+super + shift + e
+	wiki-scripts
+super + Ctrl + m
+	alsamixer
+super + shift + i
+	wiki-pages
+ctrl + super + p
+	pavucontrol
+ctrl + period
+	brightness_5
+ctrl + comma
+	brightness_dec_5
+super + shift + o
+	hkcf
+super + shift + s
+	stop_Recording
+alt + s
+	subl
+super +  t
+	$TERMINAL -e "neo_urxvt"
+super + r
+	$TERMINAL -e "cow"
+super + shift + t
+	$TERMINAL -e "tty-clock"
+# Open Webcam
+
+super + c
+	cam
+super + shift + w
+	dmenu-edit-configs.sh
+
+XF86AudioRaiseVolume
+	vol_up
+XF86AudioLowerVolume
+	vol_down
+
+super + grave
+	dmenuunicode
+XF86AudioMute
+	vol_mute_toggle
+super + x
+	$TERMINAL -e "calcurse"
+#super + p
+#	pcmanfm
+alt + period
+	vol_up
+alt + comma
+	vol_down
+alt + l
+	lockscreen
+alt + w
+	wifi on && notify-send " wifi on   "
+alt + shift + w
+	wifi off && notify-send " wifi off 睊"
+super + shift + space
+	i3 "floating toggle"
+
+alt + shift + space
+	prominent_window_up_to_left.sh
+super + d
+	dmenu_run
+super + shift + m
+	dmenumount
+super + shift + u
+	dmenuumount
+super + shift + e
+	wiki-scripts
+
+super + shift + i
+	wiki-pages
+ctrl + super + p
+	pavucontrol
+ctrl + period
+	brightness_5
+ctrl + comma
+	brightness_dec_5
+super + shift + o
+	hkcf
+alt + s
+	subl
+super +  t
+	$TERMINAL -e "neo_urxvt"
+super + r
+	$TERMINAL -e "cow"
+super + shift + t
+	$TERMINAL -e "tty-clock"
+# Open Webcam
+
+super + c
+	cam
+super + shift + w
+	dmenu-edit-configs.sh
+
+XF86AudioRaiseVolume
+	vol_up
+XF86AudioLowerVolume
+	vol_down
+
+super + grave
+	dmenuunicode
+XF86AudioMute
+	vol_mute_toggle
+super + x
+	$TERMINAL -e "calcurse"
+alt + period
+	vol_up
+alt + comma
+	vol_down
+alt + l
+	lockscreen
+alt + w
+	wifi on && notify-send " wifi on   "
+alt + shift + w
+	wifi off && notify-send " wifi off 睊"
+super + shift + space
+	i3 "floating toggle; $TERMINALicky toggle;"
+
+alt + shift + space
+	prominent_window_up_to_left.sh
+
+
+alt + p
+	"pb"
+alt + shift + p
+	pkill polybar
+super + v
+	i3 bar mode toggle
+alt + m
+	cmop
+alt + shift + m
+	$TERMINAL -e "cmni"
+alt + h
+	help_keys.sh
+alt + shift + h
+	$TERMINAL -e "help_keys_edit.sh"
+super + shift + x
+	$TERMINAL -e nvim ~/.xprofile
+alt + e
+	i3 split h ; zathura ~/Cheatsheets/Python/Python_Scripting/automatetheboring$TERMINALuffwithpython_new.pdf
+alt + shift + l
+	wiki-local-pages
+
+super + Return
+	$TERMINAL
+#i3 focus mode_toggle
+super + m
+	 $TERMINAL -e "rn"
+alt + x
+	xrdb ~/.Xresources
+alt + shift + x
+	setbg
+super + shift + p
+	pcmanfm
+alt + shift + s
+	screenKeys.sh
+alt + d
+	pkill screenkey
+alt + p
+	"pb"
+alt + shift + p
+	pkill polybar
+super + v
+	i3 bar mode toggle
+alt + m
+	cmop
+alt + shift + m
+	$TERMINAL -e "cmni"
+alt + h
+	help_keys.sh
+alt + shift + h
+	$TERMINAL -e "help_keys_edit.sh"
+super + shift + x
+	$TERMINAL -e nvim ~/.xprofile
+alt + e
+	i3 split h ; zathura ~/Cheatsheets/Python/Python_Scripting/automatetheboring$TERMINALuffwithpython_new.pdf
+alt + shift + l
+	wiki-local-pages
+
+#super + Return
+#	$TERMINAL
+
+#i3 focus mode_toggle
+super + m
+	 $TERMINAL -e "rn"
+alt + x
+	xrdb ~/.Xresources
+alt + shift + x
+	setbg
+super + shift + p
+	pcmanfm
+alt + shift + s
+	screenKeys.sh
+alt + d
+	pkill screenkey
+super + p
+	$TERMINAL -e pauseallmpv
+super + w
+	brave
+super + Tab
+	 rofi -show drun -theme dmenu
+#super + space
+	i3-swap.sh
+super + o
+	$TERMINAL -e gotop
+

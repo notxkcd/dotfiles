@@ -1,0 +1,34 @@
+#!/bin/sh
+WINIT_HIDPI_FACTOR=1
+#WINIT_X11_SCALE_FACTOR=1.5
+
+## sudo hwclock -u -s
+remapd &	# Remap caps key esc & speedy keys
+#picom &
+sxhkd -m -1 & 	#(To escape xbind keys)
+picom -b &
+#picom --backend glx --vsync  --blur-method dual_kawase --blur-strength 8 -b
+# picom --experimental-backends --blur-method box --blur-strength "2" -b
+pamixer --set-volume 75 &
+#xbacklight -set 12 &
+dwmblocks &
+#flashfocus &
+pipewire &
+pipewire-pulse &
+wireplumber &
+#sudo wifi off &
+#sudo bluetooth off &
+#sudo mkdir /run/user/1000 &
+#sudo chown shahid -R /run/user/1000/  &
+#sudo mount /dev/nvme0n1p1 mnt/HDD &
+#sudo mount /dev/nvme0n1p5 mnt/HDD2 &
+#sudo mount /dev/nvme0n1p13 mnt/HDD3 &
+#sudo hwclock --hctosys &
+emacs --daemon &
+#pamixer -t &
+setbg & 	#(Pywal and wall)
+# xrdb merge Xresources &
+# xwallpaper --zoom ~/.local/share/bg.jpg
+xinput set-prop "ELAN0501:00 04F3:3093 Touchpad" "Synaptics Tap Action" 1 1 1 2 1 3 &
+
+# sudo  ntpdate -u in.pool.ntp.org  &

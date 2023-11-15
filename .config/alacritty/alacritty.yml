@@ -1,0 +1,339 @@
+live_config_reload: true
+font:
+  normal:
+    # family: CaskaydiaCove NF
+    # family: Iosevka 
+    # family:  FiraCode Nerd Font
+    # family:  CodeNewRoman Nerd Font
+    # family:  SauceCodePro NF
+    # family:  iMWritingMono Nerd Font
+    # family: Mononoki Nerd Font
+    # family:   OverpassM Nerd Font Mono
+    # family:  Hasklug Nerd Font
+    # family:  GohuFont 14 Nerd Font Mono
+    # family: JetBrainsMono NF
+    # family: Terminess Nerd Font
+    family:  BlexMono Nerd Font Mono
+
+    style: Regular
+
+  size: 10
+  # size: 16
+
+# # Colors (Gruvbox Material Dark Medium)
+# colors:
+#   primary:
+#     background: '0x282828'
+#     foreground: '0xdfbf8e'
+#   normal:
+#     black:   '0x665c54'
+#     red:     '0xea6962'
+#     green:   '0xa9b665'
+#     yellow:  '0xe78a4e'
+#     blue:    '0x7daea3'
+#     magenta: '0xd3869b'
+#     cyan:    '0x89b482'
+#     white:   '0xdfbf8e'
+#   bright:
+#     black:   '0x928374'
+#     red:     '0xea6962'
+#     green:   '0xa9b665'
+#     yellow:  '0xe3a84e'
+#     blue:    '0x7daea3'
+#     magenta: '0xd3869b'
+#     cyan:    '0x89b482'
+#     white:   '0xdfbf8e'
+
+
+
+# Colors (Gruvbox dark)
+# colors:
+#   # Default colors
+#   primary:
+#     # hard contrast: background = '0x1d2021'
+#     background: '0x282828'
+#     # soft contrast: background = '0x32302f'
+#     foreground: '0xebdbb2'
+#   # Normal colors
+#   normal:
+#     black:   '0x282828'
+#     red:     '0xcc241d'
+#     green:   '0x98971a'
+#     yellow:  '0xd79921'
+#     blue:    '0x458588'
+#     magenta: '0xb16286'
+#     cyan:    '0x689d6a'
+#     white:   '0xa89984'
+#   # Bright colors
+#   bright:
+#     black:   '0x928374'
+#     red:     '0xfb4934'
+#     green:   '0xb8bb26'
+#     yellow:  '0xfabd2f'
+#     blue:    '0x83a598'
+#     magenta: '0xd3869b'
+#     cyan:    '0x8ec07c'
+#     white:   '0xebdbb2'
+
+# Monokai_Pro
+# colors:
+#   primary:
+#     # background: '#1e1f28'
+#     background: '#2D2A2E'
+#     foreground: '#FCFCFA'
+
+#   normal:
+#     black:   '#403E41'
+#     red:     '#FF6188'
+#     green:   '#A9DC76'
+#     yellow:  '#FFD866'
+#     blue:    '#FC9867'
+#     magenta: '#AB9DF2'
+#     cyan:    '#78DCE8'
+#     white:   '#FCFCFA'
+
+#   bright:
+#     black:   '#727072'
+#     red:     '#FF6188'
+#     green:   '#A9DC76'
+#     yellow:  '#FFD866'
+#     blue:    '#FC9867'
+#     magenta: '#AB9DF2'
+#     cyan:    '#78DCE8'
+#     white:   '#FCFCFA'
+
+env:
+  TERM: xterm-256color
+window:
+  dimensions:
+    columns: 0
+    lines: 0
+dynamic_padding: false
+padding:
+  x: 2
+  y: 2
+decorations: full
+
+draw_bold_text_with_bright_colors: true
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+  save_to_clipboard: true
+  live_config_reload: true
+# key_bindings:
+#   - { key: V, mods: Control|Shift, action: Paste }
+#   - { key: C, mods: Control|Shift, action: Copy }
+#   - { key: Key0, mods: Control, action: ResetFontSize }
+#   - { key: Equals, mods: Control, action: IncreaseFontSize }
+#   - { key: Minus, mods: Control, action: DecreaseFontSize }
+
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 5000
+
+key_bindings:
+  - {key: K, mods: Alt|Shift, action: IncreaseFontSize}
+  - {key: J, mods: Alt|Shift, action: DecreaseFontSize}
+  - {key: Equals, mods: Control, action: IncreaseFontSize}
+  - {key: Minus, mods: Control, action: DecreaseFontSize}
+  - {key: C, mods: Alt, action: Copy}
+  - {key: V, mods: Alt, action: Paste}
+  - {key: F, mods: Alt, action: ResetFontSize}
+  - {key: K, mods: Alt, action: ScrollToTop}
+  - {key: J, mods: Alt, action: ScrollToBottom}
+
+
+
+        # - { key: I,                           mode: Vi, action: ToggleViMode            }
+# key_bindings:
+#   - { key: Equals,   mods: Control,       action: IncreaseFontSize }
+#   - { key: Add,      mods: Control,       action: IncreaseFontSize }
+#   - { key: Subtract, mods: Control,       action: DecreaseFontSize }
+#   - { key: Minus,    mods: Control,       action: DecreaseFontSize }
+
+window.opacity: 0.6
+# colors:
+#   # COLORSCHEME: gruvbox_dark.yaml
+#   # Default colors
+#   primary:
+#     # hard contrast: background = '0x1d2021'
+#     background: '0x282828'
+#     # soft contrast: background = '0x32302f'
+#     foreground: '0xebdbb2'
+
+#   # Normal colors
+#   normal:
+#     black: '0x282828'
+#     red: '0xcc241d'
+#     green: '0x98971a'
+#     yellow: '0xd79921'
+#     blue: '0x458588'
+#     magenta: '0xb16286'
+#     cyan: '0x689d6a'
+#     white: '0xa89984'
+
+#   # Bright colors
+#   bright:
+#     black: '0x928374'
+#     red: '0xfb4934'
+#     green: '0xb8bb26'
+#     yellow: '0xfabd2f'
+#     blue: '0x83a598'
+#     magenta: '0xd3869b'
+#     cyan: '0x8ec07c'
+#     white: '0xebdbb2'
+
+
+
+
+
+
+
+
+
+
+# color3     black:           0xf0deae
+# color11    red:            0xdfcf9f
+# color4     green:           0xabc123
+# color12    yellow:           0x94bff3
+# color5     blue:            0xdc8cc3
+# color13    magenta           0xec93d3
+# color6     cyan:            0x8cd0d3
+# color14    white:           0x93e0e3
+# color7                0xdcdccc
+# color15               0xffffff
+# selection_foreground #3f3f3f
+
+
+
+
+
+
+
+
+
+# special:
+#     background: "#1f1f14"
+#     foreground: "#b2b8b9"
+#     cursor: "#b2b8b9"
+
+# colors:
+# color0: "#1f1f14"
+#     color1: "#944D35"
+#     color2: "#8B7037"
+#     color3: "#8B784B"
+#     color4: "#78855A"
+#     color5: "#B09A53"
+#     color6: "#9B9260"
+#     color7: "#b2b8b9"
+#     color8: "#7c8081"
+#     color9: "#944D35"
+#     color10: "#8B7037"
+#     color11: "#8B784B"
+#     color12: "#78855A"
+#     color13: "#B09A53"
+#     color14: "#9B9260"
+#     color15: "#b2b8b9"
+
+colors:
+    primary:
+      background: '0x1e1c31'
+      # background: '0x2d2a2e'
+       
+      foreground: '0xcbe3e7'
+    cursor:
+      text: '0x1e1c31'
+      cursor: '0xa1efd3'
+    normal:
+      black: '0x1e1c31'
+      red: '0xf48fb1'
+      green: '0xa1efd3'
+      yellow: '0xffe6b3'
+      blue: '0x91ddff'
+      magenta: '0xd4bfff'
+      cyan: '0xabf8f7'
+      white: '0xcbe3e7'
+    bright:
+      black: '0x585273'
+      red: '0xf02e6e'
+      green: '0x7fe9c3'
+      yellow: '0xf2b482'
+      blue: '0x78a8ff'
+      magenta: '0x7676ff'
+      cyan: '0x63f2f1'
+      white: '0x8a889d'
+
+
+schemes:
+  # Tokyo Night theme, based on both:
+  #   https://github.com/ghifarit53/tokyonight-vim
+  #   https://github.com/enkia/tokyo-night-vscode-theme
+  tokyo-night: &tokyo-night
+    # Default colors
+    primary:
+      background: '#1a1b26'
+      foreground: '#a9b1d6'
+
+    # Normal colors
+    normal:
+      black:   '#32344a'
+      red:     '#f7768e'
+      green:   '#9ece6a'
+      yellow:  '#e0af68'
+      blue:    '#7aa2f7'
+      magenta: '#ad8ee6'
+      cyan:    '#449dab'
+      white:   '#787c99'
+
+    # Bright colors
+    bright:
+      black:   '#444b6a'
+      red:     '#ff7a93'
+      green:   '#b9f27c'
+      yellow:  '#ff9e64'
+      blue:    '#7da6ff'
+      magenta: '#bb9af7'
+      cyan:    '#0db9d7'
+      white:   '#acb0d0'
+
+  tokyo-night-storm: &tokyo-night-storm
+    # Default colors
+    primary:
+      background: '#24283b'
+      foreground: '#a9b1d6'
+
+    # Normal colors
+    normal:
+      black:   '#32344a'
+      red:     '#f7768e'
+      green:   '#9ece6a'
+      yellow:  '#e0af68'
+      blue:    '#7aa2f7'
+      magenta: '#ad8ee6'
+      cyan:    '#449dab'
+      white:   '#9699a8'
+
+    # Bright colors
+    bright:
+      black:   '#444b6a'
+      red:     '#ff7a93'
+      green:   '#b9f27c'
+      yellow:  '#ff9e64'
+      blue:    '#7da6ff'
+      magenta: '#bb9af7'
+      cyan:    '#0db9d7'
+      white:   '#acb0d0'
+
+window.opacity: 0.6
+env:
+  TERM: xterm-256color
+
+# import:
+  # - ~/.config/alacritty/embark.yml
+
+blinking: None
+
+
+colors: *tokyo-night

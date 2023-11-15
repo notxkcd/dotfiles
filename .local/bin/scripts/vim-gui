@@ -1,0 +1,7 @@
+#!/bin/sh
+
+KICKSTARTVIM_CONFIG_DIR=/home/shahid/.config/nvim-kickstarter/
+
+
+exec neovide -- -u "$KICKSTARTVIM_CONFIG_DIR/init.lua" "$@"
+

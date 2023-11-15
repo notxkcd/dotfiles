@@ -1,0 +1,11 @@
+Xft.dpi:       96
+Xft.antialias: true
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.autohint:  true
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+Sxiv.background: #000000
+Sxiv.foreground: #00C0FF
+sxiv.window.background: #000000
+

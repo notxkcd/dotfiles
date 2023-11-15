@@ -1,0 +1,7 @@
+#!/bin/bash
+
+pattern="*.$1"
+
+find "$(pwd)" -type f -name "$pattern" -print0 | while IFS= read -r -d '' file;do
+echo "$file"
+done
