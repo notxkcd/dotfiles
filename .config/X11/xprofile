@@ -24,7 +24,6 @@ wireplumber &
 #sudo mount /dev/nvme0n1p5 mnt/HDD2 &
 #sudo mount /dev/nvme0n1p13 mnt/HDD3 &
 #sudo hwclock --hctosys &
-emacs --daemon &
 #pamixer -t &
 setbg & 	#(Pywal and wall)
 # xrdb merge Xresources &
