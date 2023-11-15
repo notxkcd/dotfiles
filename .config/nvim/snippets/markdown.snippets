@@ -1,0 +1,126 @@
+snippet md
+  ---
+  title: $1
+  author: Mohammed Shahid
+  date: $2
+  geometry: a4paper
+  description: This is a brief description of my document.
+  header-includes:
+    - \usepackage{ebgaramond}
+    - \usepackage{framed}
+    - \usepackage{xcolor}
+    - \usepackage{tikz}
+    - \usepackage{tcolorbox}
+		- \usepackage{mdframed}
+  ---
+  $0
+
+snippet TODO
+  <hr>
+
+  ## TODO
+
+  * [X] Read 1 Surah with meaning.
+  * [ ] 1 hour workout.
+  * [ ] 20 Math Problems.
+  * [ ] 10 Coding Problems.
+  * [ ] 5 Euler Project Problems.
+  * [ ] 10 Page of Physical Book.
+  * [ ] 3 Litres of Water.
+
+    <hr>
+
+snippet u
+  <u>$1</u>$0
+
+snippet det
+
+  <details type="button" class="collapsible">
+  <summary>$1</summary>
+  $2
+
+  </details>$0
+
+snippet cal
+  | TIME     | 08/04/2023  | 08/05/2023  | 08/06/2023  | 08/07/2023  |
+  | ----     | ----------- | ----------- | ----------- | ----------- |
+  | 8:00 AM  |
+  | 9:00 AM  |
+  | 10:00 AM |
+  | 11:00 AM |
+  | 12:00 PM |
+  | 1:00 PM  |
+  | 2:00 PM  |
+  | 3:00 PM  |
+  | 4:00 PM  |
+  | 5:00 PM  |
+  | 6:00 PM  |
+  | 7:00 PM  |
+  | 8:00 PM  |
+
+
+snippet ca
+  Today is `!lua os.date('%Y-%m-%d')`
+
+snippet arabic
+  <div class="arabic">
+  $1
+  </div>
+  $0
+
+snippet box
+	\begin{mdframed}[style=dottedbox]
+
+snippet endbox
+	\end{mdframed}
+
+snippet code
+		~~~$1
+				$2
+		~~~
+		$0
+snippet pdf
+		output: pdf_document
+
+snippet c
+		~~~c
+				$0
+		~~~
+
+snippet sh
+		~~~sh
+				$0
+		~~~
+snippet py
+		~~~python
+				$0
+		~~~
+
+snippet cpp
+		~~~cpp
+				$0
+		~~~
+
+snippet r
+		~~~r
+				$0
+		~~~
+
+snippet ans
+		[Solution](Code/$1.cpp)
+snippet link
+		[$2]($1)$0
+
+snippet css
+		<style>
+		@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Spectral&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+		body{
+		font-family: 'Spectral', serif;
+		}
+		pre{
+		font-family: 'Fira Mono', monospace;
+		}
+		</style>
+

@@ -1,0 +1,10 @@
+git add .config/nvim/autoload \
+        .config/nvim/colors \
+        .config/nvim/ftdetect \
+        .config/nvim/ftplugin \
+        .config/nvim/snippets \
+        .config/nvim/syntax \
+        .config/nvim/Anya.vim \
+        .config/nvim/init.vim \
+        .config/nvim/lua.snippets \
+        .config/nvim/scripts.vim 

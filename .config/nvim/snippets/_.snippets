@@ -1,0 +1,23 @@
+snippet day
+	`strftime("%d-%b-%Y")`
+snippet add
+	snippet da "Add a day to the current date and display" b
+	let today = strftime("%d-%b-%Y")
+	let tomorrow = strftime("%d-%b-%Y", localtime()+24*60*60)
+snippet ytp
+	https://www.youtube.com/feeds/videos.xml?playlist_id=
+snippet yt
+	https://www.youtube.com/feeds/videos.xml?channel_id=
+snippet 50
+	https://www.scriptbarrel.com/xml.cgi?channel_id=
+snippet playlist
+	https://www.youtube.com/feeds/videos.xml?playlist_id=
+snippet play
+	https://www.youtube.com/feeds/videos.xml?playlist_id=
+snippet list
+	https://www.youtube.com/feeds/videos.xml?playlist_id=
+
+snippet asm
+	.intel_syntax noprefix
+	.globl main
+
