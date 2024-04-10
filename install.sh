@@ -1,6 +1,10 @@
 #!/bin/sh
 
-sudo xbps-install -Su dbus elogind vim neovim git  xinit xcompmgr polkit arandr xdotool \
+# Prompt for password at the start
+sudo -n true
+
+# Install dependencies
+sudo xbps-install -S dbus elogind vim neovim git  xinit xcompmgr polkit arandr xdotool \
   alacritty exa lf ranger stow  \
   font-awesome font-awesome5 font-awesome6 font-iosevka noto-fonts-emoji noto-fonts-ttf\
   chrony pkgconf harfbuzz icu ImageMagick\
@@ -15,7 +19,31 @@ sudo xbps-install -Su dbus elogind vim neovim git  xinit xcompmgr polkit arandr 
   picom starship gtk+3 gtk+3-devel gtk-engine-murrine \
   libX11-devel libXft-devel libXinerama-devel
 
+# Clone and install dwm, st, dwmblocks and dmenu
+cd ~/.local/share
+for app in dwm dwmblocks, dotfiles; do
+    git clone "https://github.com/notxkcd/$app"
+    cd "$app"
+    make
+    sudo make clean install
+    cd ..
+done
 
+# Create DWM session file in XDG directory
+echo "Creating DWM session"
+echo "[Desktop Entry]
+Encoding=UTF-8
+Name=DWM
+Exec=dwm
+Icon=dwm
+Type=XSession" | sudo tee "/usr/share/xsessions/dwm.desktop"
+
+# Symlinking dotfiles
+echo "Symlinking dotfiles with stow"
+cd ~/.local/share/dotfiles
+stow -v -t ~ ./
+
+echo "Installation is now complete. You can now logout and change your DE/WM."
 
   #alsa-plugins \ #Audio
   #notmuch-mutt notmuch urlview lynx isync msmtp pass  \
