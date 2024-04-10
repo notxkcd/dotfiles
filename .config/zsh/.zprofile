@@ -37,7 +37,7 @@ export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 export PATH="$PATH:$(du "$HOME/.local/bin/scripts" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 export PATH="$PATH:$(du "$HOME/.local/bin/statusbar" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
-export PATH="$PATH:$(du $HOME/.local/share/opt | grep -i "bin" | awk '{print $2}' | tr '\n' ':' | sed 's/:$//')"
+#export PATH="$PATH:$(du $HOME/.local/share/opt | grep -i "bin" | awk '{print $2}' | tr '\n' ':' | sed 's/:$//')"
 #export PATH=~/.npm-global/bin:$PATH
 
 export LIBGS="/usr/lib/libgs.so"
