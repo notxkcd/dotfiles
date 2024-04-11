@@ -25,9 +25,9 @@ wireplumber &
 #sudo mount /dev/nvme0n1p13 mnt/HDD3 &
 #sudo hwclock --hctosys &
 #pamixer -t &
-setbg & 	#(Pywal and wall)
+#setbg & 	#(Pywal and wall)
 # xrdb merge Xresources &
-# xwallpaper --zoom ~/.local/share/bg.jpg
+xwallpaper --zoom ~/.local/share/walls/wall.jpg &
 xinput set-prop "ELAN0501:00 04F3:3093 Touchpad" "Synaptics Tap Action" 1 1 1 2 1 3 &
 
 # sudo  ntpdate -u in.pool.ntp.org  &
