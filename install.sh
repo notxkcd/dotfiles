@@ -3,8 +3,16 @@
 # Prompt for password at the start
 sudo -n true
 
+# Change Mirror to China
+echo "Changing mirrors to Beijing Foreign Studies University(BFSU)"
+sudo echo "repository=https://mirrors.bfsu.edu.cn/voidlinux/current/" > /etc/xbps.d/00-repository-main.conf
+
+#After changing the URLs, you must synchronize xbps with the new mirrors:
+echo "synchronize xbps with the new mirrors..."
+# sudo xbps-install -S
+
 # Install dependencies
-sudo xbps-install -Su dbus elogind vim neovim git  xinit xcompmgr polkit arandr xdotool \
+sudo xbps-install -S dbus elogind vim neovim git  xinit xcompmgr polkit arandr xdotool \
   alacritty exa lf ranger stow  \
   font-awesome font-awesome5 font-awesome6 font-iosevka noto-fonts-emoji noto-fonts-ttf\
   chrony pkgconf harfbuzz icu ImageMagick\
@@ -19,7 +27,7 @@ sudo xbps-install -Su dbus elogind vim neovim git  xinit xcompmgr polkit arandr 
   picom starship gtk+3 gtk+3-devel gtk-engine-murrine \
   libX11-devel libXft-devel libXinerama-devel
 
-#disown - alternative to nohup.
+
 # Enabling important services
 
 echo "Enabling important services..."
@@ -73,5 +81,6 @@ echo "Installation is now complete. You can now logout and change your DE/WM."
   #alsa-plugins \ #Audio
   #notmuch-mutt notmuch urlview lynx isync msmtp pass  \
   #hugo go openntpd\
+  #disown - alternative to nohup.
 
 
