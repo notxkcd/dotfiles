@@ -42,12 +42,16 @@ done
 
 # Clone and install dwm, st, dwmblocks and dmenu
 cd ~/.local/share
-for app in dwm dwmblocks, dotfiles; do
+for app in dwm dwmblocks, dotfiles, walls; do
     git clone "https://github.com/notxkcd/$app"
     cd "$app"
     make
     sudo make clean install
     cd ..
+done
+
+for app in dotfiles, walls; do
+  git clone "https://github.com/notxkcd/$app"
 done
 
 # Create DWM session file in XDG directory
