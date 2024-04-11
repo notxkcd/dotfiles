@@ -4,7 +4,7 @@
 sudo -n true
 
 # Install dependencies
-sudo xbps-install -S dbus elogind vim neovim git  xinit xcompmgr polkit arandr xdotool \
+sudo xbps-install -Su dbus elogind vim neovim git  xinit xcompmgr polkit arandr xdotool \
   alacritty exa lf ranger stow  \
   font-awesome font-awesome5 font-awesome6 font-iosevka noto-fonts-emoji noto-fonts-ttf\
   chrony pkgconf harfbuzz icu ImageMagick\
@@ -18,6 +18,27 @@ sudo xbps-install -S dbus elogind vim neovim git  xinit xcompmgr polkit arandr x
   newsboat xcb-util-wm poppler-utils poppler pcmanfm tumbler lsof ripgrep \
   picom starship gtk+3 gtk+3-devel gtk-engine-murrine \
   libX11-devel libXft-devel libXinerama-devel
+
+#disown - alternative to nohup.
+# Enabling important services
+
+echo "Enabling important services..."
+declare services=("
+        /etc/sv/acpid
+        /etc/sv/chronyd
+        /etc/sv/dbus
+        /etc/sv/dhcpcd
+        /etc/sv/elogind
+        /etc/sv/polkitd
+        /etc/sv/sshd
+        /etc/sv/udevd
+        /etc/sv/wpa_supplicant
+        ")
+
+for service in $services; do
+        sudo ln -s $service /var/service
+done
+
 
 # Clone and install dwm, st, dwmblocks and dmenu
 cd ~/.local/share
