@@ -13,6 +13,6 @@ declare services=("
         /etc/sv/wpa_supplicant
         ")
 
-for s in $services; do
-        sudo ln -s $s /var/service
+for service in $services; do
+        sudo ln -s $service /var/service
 done
